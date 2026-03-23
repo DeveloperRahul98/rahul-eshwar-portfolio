@@ -8,9 +8,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-card-border bg-card/40">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center">
           {/* Left — branding */}
-          <div className="flex items-center gap-2 text-sm text-muted">
+          <div className="flex items-center gap-2 text-sm text-muted sm:flex-1 sm:justify-start">
             <Image
               src="/logo.png"
               alt="RKE Logo"
@@ -26,14 +26,14 @@ export default function Footer() {
           <a
             href={personalInfo.resumeUrl}
             download
-            className="flex items-center gap-2 text-sm text-muted hover:text-cyan transition-colors font-mono"
+            className="flex items-center justify-center gap-2 text-sm text-muted hover:text-cyan transition-colors font-mono sm:flex-1"
           >
             <FiDownload size={14} />
             Download Resume
           </a>
 
           {/* Right — socials */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 sm:flex-1 sm:justify-end">
             {socialLinks.map((social) => {
               const Icon = social.icon;
               return (

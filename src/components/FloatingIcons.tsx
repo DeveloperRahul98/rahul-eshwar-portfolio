@@ -41,7 +41,7 @@ export default function FloatingIcons() {
           className="absolute"
           style={{ left: x, top: y }}
           animate={{
-            opacity: [0.03, 0.15, 0.06, 0.15, 0.03],
+            opacity: [0.02, 0.08, 0.04, 0.08, 0.02],
             y: [0, -25, 0, 25, 0],
             x: [0, 12, 0, -12, 0],
             rotate: [0, 8, 0, -8, 0],
