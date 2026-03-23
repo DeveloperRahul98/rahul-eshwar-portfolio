@@ -44,7 +44,7 @@ export default function LoadingScreen() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="mt-6 text-center"
             >
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground tracking-wide">
+              <h1 className="text-2xl sm:text-3xl font-bold gradient-text tracking-wide">
                 Rahul Kumar Eshwar
               </h1>
               <p className="mt-2 text-sm sm:text-base text-cyan font-mono">

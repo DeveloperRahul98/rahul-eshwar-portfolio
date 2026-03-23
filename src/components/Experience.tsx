@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import SectionWrapper from "./SectionWrapper";
+import SpotlightCard from "./SpotlightCard";
+import TextReveal from "./TextReveal";
 import { experiences } from "@/data/portfolio";
 
 export default function Experience() {
   return (
     <SectionWrapper id="experience">
       <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold font-mono">
-          <span className="text-cyan">&lt;</span> Experience{" "}
-          <span className="text-cyan">/&gt;</span>
+        <h2 className="text-2xl sm:text-4xl font-bold font-mono">
+          <span className="text-cyan align-middle mx-1">&lt;</span>
+          <TextReveal className="gradient-text">Experience</TextReveal>
+          <span className="text-cyan align-middle mx-1">/&gt;</span>
         </h2>
       </div>
 
@@ -43,7 +46,7 @@ export default function Experience() {
                     isLeft ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div className="glass-card rounded-xl p-6 neon-border-hover transition-all duration-300 hover:-translate-y-1">
+                  <SpotlightCard className="glass-card rounded-xl p-6 neon-border-hover transition-all duration-300 hover:-translate-y-1 gradient-border">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
                       <h3 className="text-lg font-bold text-foreground">
                         {exp.role}
@@ -71,7 +74,7 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </SpotlightCard>
                 </div>
               </motion.div>
             );

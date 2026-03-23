@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import SectionWrapper from "./SectionWrapper";
+import SpotlightCard from "./SpotlightCard";
+import TextReveal from "./TextReveal";
 import { FiBriefcase, FiMapPin, FiMonitor, FiCalendar, FiTrendingUp } from "react-icons/fi";
 
 const items = [
@@ -31,9 +33,10 @@ export default function LookingFor() {
   return (
     <SectionWrapper id="hiring">
       <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold font-mono">
-          <span className="text-cyan">&lt;</span> What I&apos;m Looking For{" "}
-          <span className="text-cyan">/&gt;</span>
+        <h2 className="text-2xl sm:text-4xl font-bold font-mono">
+          <span className="text-cyan align-middle mx-1">&lt;</span>
+          <TextReveal className="gradient-text">What I&apos;m Looking For</TextReveal>
+          <span className="text-cyan align-middle mx-1">/&gt;</span>
         </h2>
       </div>
 
@@ -48,21 +51,22 @@ export default function LookingFor() {
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -4 }}
-              className="glass-card rounded-xl p-5 neon-border-hover transition-all duration-300 group"
             >
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-cyan/10 text-cyan shrink-0 mt-0.5">
-                  <Icon size={18} />
+              <SpotlightCard className="glass-card rounded-xl p-5 neon-border-hover transition-all duration-300 group h-full">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-cyan/10 text-cyan shrink-0 mt-0.5">
+                    <Icon size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted font-mono uppercase tracking-wider">
+                      {item.label}
+                    </p>
+                    <p className="text-sm font-medium text-foreground mt-1 group-hover:text-cyan transition-colors">
+                      {item.value}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs text-muted font-mono uppercase tracking-wider">
-                    {item.label}
-                  </p>
-                  <p className="text-sm font-medium text-foreground mt-1 group-hover:text-cyan transition-colors">
-                    {item.value}
-                  </p>
-                </div>
-              </div>
+              </SpotlightCard>
             </motion.div>
           );
         })}
@@ -76,7 +80,9 @@ export default function LookingFor() {
         viewport={{ once: true }}
         className="mt-8 max-w-3xl mx-auto"
       >
-        <div className="glass-card rounded-xl p-5 neon-border-hover transition-all duration-300 group">
+        <SpotlightCard className="glass-card rounded-xl p-5 neon-border-hover transition-all duration-300 group"
+          spotlightColor="rgba(139, 92, 246, 0.12)"
+        >
           <div className="flex items-start gap-3">
             <div className="p-2 rounded-lg bg-cyan/10 text-cyan shrink-0 mt-0.5">
               <FiTrendingUp size={18} />
@@ -90,7 +96,7 @@ export default function LookingFor() {
               </p>
             </div>
           </div>
-        </div>
+        </SpotlightCard>
       </motion.div>
     </SectionWrapper>
   );

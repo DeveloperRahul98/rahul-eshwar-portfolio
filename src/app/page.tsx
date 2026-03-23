@@ -17,6 +17,10 @@ import CommandPalette from "@/components/CommandPalette";
 import ScrollToTop from "@/components/ScrollToTop";
 import LookingFor from "@/components/LookingFor";
 import LoadingScreen from "@/components/LoadingScreen";
+import { MarqueeForward, MarqueeReverse } from "@/components/Marquee";
+import SmoothScroll from "@/components/SmoothScroll";
+import ScrollProgress from "@/components/ScrollProgress";
+import InteractiveTerminal from "@/components/InteractiveTerminal";
 
 export default function Home() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
@@ -35,19 +39,26 @@ export default function Home() {
 
   return (
     <>
+      <SmoothScroll />
       <LoadingScreen />
+      <ScrollProgress />
       <CursorGlow />
       <FloatingIcons />
+      {/* Noise grain overlay */}
+      <div className="noise-overlay" />
       <Navbar onCommandPalette={() => setCommandPaletteOpen(true)} />
       <main>
         <Hero />
         <About />
+        <MarqueeForward />
         <Skills />
+        <MarqueeReverse />
         <Experience />
         <Projects />
         <Achievements />
         <Education />
         <LookingFor />
+        <InteractiveTerminal />
         <Contact />
       </main>
       <Footer />

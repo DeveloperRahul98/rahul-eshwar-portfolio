@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { personalInfo } from "@/data/portfolio";
 import Image from "next/image";
+import MagneticButton from "./MagneticButton";
+import TiltCard from "./TiltCard";
 
 const codeLines = [
   { indent: 0, text: "const rahul = {", delay: 0 },
@@ -139,7 +141,7 @@ export default function Hero() {
             className="w-full order-2 lg:order-1"
           >
             {/* Editor window */}
-            <div className="rounded-xl border border-card-border bg-card/90 backdrop-blur-sm overflow-hidden neon-border">
+            <TiltCard className="rounded-xl border border-card-border bg-card/90 backdrop-blur-sm overflow-hidden neon-border gradient-border">
               {/* Title bar */}
               <div className="flex items-center gap-2 px-4 py-3 border-b border-card-border bg-card">
                 <div className="flex gap-1.5">
@@ -170,27 +172,29 @@ export default function Hero() {
                   )}
                 </motion.div>
               </div>
-            </div>
+            </TiltCard>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons with Magnetic effect */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 0.5 }}
               className="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start"
             >
-              <button
+              <MagneticButton
+                as="button"
                 onClick={() => scrollTo("#projects")}
                 className="px-6 py-3 bg-cyan/10 border border-cyan/30 text-cyan rounded-lg font-medium text-sm hover:bg-cyan/20 hover:border-cyan/50 transition-all duration-300"
               >
                 View My Work
-              </button>
-              <button
+              </MagneticButton>
+              <MagneticButton
+                as="button"
                 onClick={() => scrollTo("#contact")}
                 className="px-6 py-3 border border-card-border text-foreground rounded-lg font-medium text-sm hover:border-cyan/30 hover:text-cyan transition-all duration-300"
               >
                 Get In Touch
-              </button>
+              </MagneticButton>
             </motion.div>
           </motion.div>
 
