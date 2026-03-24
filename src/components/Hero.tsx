@@ -141,7 +141,7 @@ export default function Hero() {
             className="w-full order-2 lg:order-1"
           >
             {/* Editor window */}
-            <TiltCard className="rounded-xl border border-card-border bg-card/90 backdrop-blur-sm overflow-hidden neon-border gradient-border">
+            <TiltCard className="rounded-xl border border-card-border bg-card/90 backdrop-blur-sm overflow-hidden neon-border">
               {/* Title bar */}
               <div className="flex items-center gap-2 px-4 py-3 border-b border-card-border bg-card">
                 <div className="flex gap-1.5">

@@ -66,7 +66,7 @@ export default function About() {
           viewport={{ once: true }}
           className="col-span-2 row-span-2"
         >
-          <SpotlightCard className="glass-card rounded-2xl p-6 h-full neon-border-hover transition-all duration-300 gradient-border">
+          <SpotlightCard className="glass-card rounded-2xl p-6 h-full neon-border-hover transition-all duration-300">
             <div className="flex items-center gap-2 mb-4">
               <FiCode className="text-cyan" size={18} />
               <span className="text-xs font-mono text-cyan uppercase tracking-wider">Who I Am</span>

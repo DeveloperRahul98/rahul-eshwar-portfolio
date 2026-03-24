@@ -165,7 +165,7 @@ export default function InteractiveTerminal() {
         viewport={{ once: true }}
         className="max-w-3xl mx-auto"
       >
-        <div className="rounded-xl border border-card-border bg-card/90 backdrop-blur-sm overflow-hidden neon-border gradient-border">
+        <div className="rounded-xl border border-card-border bg-card/90 backdrop-blur-sm overflow-hidden neon-border">
           {/* Title bar */}
           <div className="flex items-center gap-2 px-4 py-3 border-b border-card-border bg-card">
             <div className="flex gap-1.5">

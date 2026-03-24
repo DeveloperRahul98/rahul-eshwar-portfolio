@@ -212,6 +212,15 @@ export const projects: Project[] = [
   },
   // ── Personal Projects ──
   {
+    title: "Portlio",
+    description:
+      "A lightweight SaaS platform for freelancers to create branded client portals. Clients can track project progress in real-time — no login required. Features project status tracking, an updates feed with markdown support, file sharing with signed URLs, invoice creation, and email notifications. Built with a public portal view and a private freelancer dashboard.",
+    image: "/projects/portlio.png",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Shadcn UI"],
+    githubUrl: "https://github.com/DeveloperRahul98/portlio",
+    type: "personal",
+  },
+  {
     title: "SarkariGuide",
     description:
       "A free tool helping Indian citizens manage government document renewals. Features document tracking with color-coded expiry status, smart reminders before expiry, city-specific step-by-step guides, and community tips.",

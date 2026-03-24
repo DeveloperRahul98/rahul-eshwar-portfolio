@@ -46,7 +46,7 @@ export default function Experience() {
                     isLeft ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <SpotlightCard className="glass-card rounded-xl p-6 neon-border-hover transition-all duration-300 hover:-translate-y-1 gradient-border">
+                  <SpotlightCard className="glass-card rounded-xl p-6 neon-border-hover transition-all duration-300 hover:-translate-y-1">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
                       <h3 className="text-lg font-bold text-foreground">
                         {exp.role}
