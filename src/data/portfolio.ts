@@ -212,6 +212,15 @@ export const projects: Project[] = [
   },
   // ── Personal Projects ──
   {
+    title: "Curiosity",
+    description:
+      "A free, visual encyclopedia web app that presents knowledge as bite-sized, beautifully designed topic cards. Every topic is a 30-second learning experience with stunning hero images, concise summaries, fun facts, interactive quizzes, and videos. Features fuzzy search, dark/light theme, and 10+ hand-crafted MDX topics across categories like Space, Nature, and Technology.",
+    image: "/projects/curiosity.png",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MDX", "Framer Motion", "Fuse.js"],
+    githubUrl: "https://github.com/DeveloperRahul98/curiosity",
+    type: "personal",
+  },
+  {
     title: "Portlio",
     description:
       "A lightweight SaaS platform for freelancers to create branded client portals. Clients can track project progress in real-time — no login required. Features project status tracking, an updates feed with markdown support, file sharing with signed URLs, invoice creation, and email notifications. Built with a public portal view and a private freelancer dashboard.",
